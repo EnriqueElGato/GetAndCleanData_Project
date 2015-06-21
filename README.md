@@ -6,9 +6,9 @@ All the scripits and data files created for this analysis can be found [here][pr
 
 The two files created by this analysis are described below:
 
-1. merged_mean_sd_X_test_train.txt: A file containing a merger of the mean and standard deviation measurements of the test and training datasets. 
+* merged_mean_sd_X_test_train.txt: A file containing a merger of the mean and standard deviation measurements of the test and training datasets. 
 
-2. avg_merged_mean_sd_X_test_train.txt: A calculated average of each of the mean and standard deviation fields found in the merged_mean_sd_X_test_train.txt file grouped by subject and activity.
+* avg_merged_mean_sd_X_test_train.txt: A calculated average of each of the mean and standard deviation fields found in the merged_mean_sd_X_test_train.txt file grouped by subject and activity.
 ## How The Files Where Created
 The R script run_analysis.R loads the UCI HAR Dataset, performs the transformations and then extracts the merged and averaged data into the two files. Below are the steps execute by the script.  The script's run_analysis() function takes a directory parameter which is used to set the current working directory. This working directory needs to contain the UCI HAR Dataset files in the locations described below. The script executes the following steps: 
 
@@ -29,8 +29,8 @@ The R script run_analysis.R loads the UCI HAR Dataset, performs the transformati
 5. The averaged data is then written to the file avg_merged_mean_sd_X_test_train.txt
 
 ##Instruction To Load Files
-To load merged_mean_sd_X_test_train.txt run: read.table("./merged_mean_sd_X_test_train.txt",head=TRUE)
-To load avg_merged_mean_sd_X_test_train.txt run: read.table("./avg_merged_mean_sd_X_test_train.txt",head=TRUE)
+* To load merged_mean_sd_X_test_train.txt run: read.table("./merged_mean_sd_X_test_train.txt",head=TRUE)
+* To load avg_merged_mean_sd_X_test_train.txt run: read.table("./avg_merged_mean_sd_X_test_train.txt",head=TRUE)
 
 [datalink]: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "UCI HAR Dataset"
 [project]: https://github.com/EnriqueElGato/GetAndCleanData_Project "Project files."
