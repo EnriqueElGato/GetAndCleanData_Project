@@ -1,5 +1,7 @@
 ## Data Dictionary
 
+Please review the README.md file before reviewing this file.
+
 The merged_mean_sd_X_test_train.txt and avg_merged_mean_sd_X_test_train.txt files contain the following fields.
 
 * Subject - Integer value for subject from whom measurements where taken. Values range from 1 to 30. 
