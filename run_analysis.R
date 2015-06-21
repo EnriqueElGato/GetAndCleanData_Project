@@ -19,30 +19,6 @@
 #
 #
 run_analysis <- function(fileDir="./"){
-    
-#
-
-#c("BodyBody","Body","Jerk","Body","std\\(\\)","mean\\(\\)","t","f","Acc","Gravity","Graviy","Gyro","Mag","X","Y","Z")
-#f <- function(cols,t1,t2){
-#    
-#    for (i in 1:length(t1) ) {
-#        cols<-gsub(t1[i],"",cols)
-#    }
-#    cols
-#}
-
-#Code Book
-#Read Me
-#how created
-#Instruction list to load
-#how to read
-    
-    # Example code book: 
-    # https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf 
-    # Tidy data: http://vita.had.co.nz/papers/tidy-data.pdf
-
-# Acc = Accelerometer
-# Gyro = Gyroscope
 
 setwd(fileDir)
 
