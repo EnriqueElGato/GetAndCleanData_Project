@@ -10,7 +10,7 @@ The two files created by this analysis are described below:
 
 * avg_merged_mean_sd_X_test_train.txt: A calculated average of each of the mean and standard deviation fields found in the merged_mean_sd_X_test_train.txt file grouped by subject and activity.
 ## How The Files Where Created
-The R script run_analysis.R loads the UCI HAR Dataset, performs the transformations and then extracts the merged and averaged data into the two files. Below are the steps execute by the script.  The script's run_analysis() function takes a directory parameter which is used to set the current working directory. This working directory needs to contain the UCI HAR Dataset files in the locations described below. The script executes the following steps: 
+The R script run_analysis.R loads the UCI HAR Dataset, performs the transformations and then extracts the merged and averaged data into the two files. Below are the steps execute by the script.  The script's run_analysis() function takes a directory parameter which is used to set the current working directory. This working directory needs to contain the UCI HAR Dataset files in the locations described below. The files are created in the current working directory. The script executes the following steps: 
 
 1. The following UCI HAR Dataset files are loaded:
  + ./activity_labels.txt
@@ -23,10 +23,11 @@ The R script run_analysis.R loads the UCI HAR Dataset, performs the transformati
  + ./train/subject_train.txt
 2. The test and training data are separately merged with their subject data (contained in subject_*.txt) and activity data (contained in y_*.txt).
 3. The test and training data are then merged. 
-4. The columns contained in the merged data are then filtered to only contain the fields which contain "mean()" and "std()". 
-5. The mean and standard deviation data is then written to the file merged_mean_sd_X_test_train.txt.
-4. An average grouped by the Subject and Activity is then performed on the mean and standard deviation variables. The prefix "avg_" is added to each variable name.
-5. The averaged data is then written to the file avg_merged_mean_sd_X_test_train.txt
+4. The activity data from the y_*.txt files is transformed to reflect the descriptions in activity_labels.txt.
+5. The columns contained in the merged data are then filtered to only contain the fields which contain "mean()" and "std()". 
+6. The mean and standard deviation data is then written to the file merged_mean_sd_X_test_train.txt.
+7. An average grouped by the Subject and Activity is then performed on the mean and standard deviation variables. The prefix "avg_" is added to each variable name.
+8. The averaged data is then written to the file avg_merged_mean_sd_X_test_train.txt
 
 ##Instruction To Load Files
 * To load merged_mean_sd_X_test_train.txt run: read.table("./merged_mean_sd_X_test_train.txt",head=TRUE)
